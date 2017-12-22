@@ -1,0 +1,48 @@
+body {
+    position: relative;
+    height: 100vh;
+}
+
+body {
+    background-image: linear-gradient(45deg, #361752, #B31B67);
+    background-image: -webkit-linear-gradient(45deg, #361752, #B31B67);
+    background-image: -moz-linear-gradient(45deg, #361752, #B31B67);
+    background-image: -ms-linear-gradient(45deg, #361752, #B31B67);
+    background-image: -o-linear-gradient(45deg, #361752, #B31B67);
+    color: white;
+    font-size: 125%;
+}
+
+main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+a {
+    padding: 8px 16px;
+    background-color: #f1f1f1;
+    color: black;
+    height: 100%;
+    vertical-align: middle;
+}
+
+a:hover {
+    background-color: #ddd;
+    text-decoration: none;
+    color: black;
+}
+
+a#previous-day {
+    position: absolute;
+    left: 0px;
+}
+
+a#next-day {
+    position: absolute;
+    right: 0px;
+}
+
+
