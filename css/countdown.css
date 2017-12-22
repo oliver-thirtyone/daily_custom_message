@@ -101,9 +101,6 @@
     transform-origin: 50% 0;
 }
 
-.main-countdown .count.next {
-}
-
 .main-countdown .label {
     font-size: normal;
     margin-top: 5px;
@@ -159,25 +156,4 @@
     -ms-transform: rotateX(0deg);
     -o-transform: rotateX(0deg);
     transform: rotateX(0deg);
-}
-
-@media screen and (max-width: 48em) {
-    .main-countdown .countdown-container {
-        height: 100px;
-    }
-
-    .main-countdown .time {
-        height: 70px;
-        width: 48px;
-    }
-
-    .main-countdown .count {
-        font-size: 1.5em;
-        line-height: 70px;
-    }
-
-    .main-countdown .label {
-        font-size: 0.8em;
-        top: 72px;
-    }
 }
