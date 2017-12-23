@@ -15,14 +15,29 @@ function displayMessage(entries) {
     messageElement.show();
 }
 
+function displayPatienceMessage() {
+    var weekday = new Date().getDay();
+    var entries = [{type: "image", entry: "img/patience-" + weekday + ".jpg"}];
+    displayMessage(entries);
+}
+
+function displayLastMessage() {
+    var year = new Date().getFullYear();
+    var entries = [
+        {type: "image", entry: "img/last_message.jpg"},
+        {type: "youtube", entry: "OUyfQLd3bCs"},
+        {type: "text", entry: "&copy; " + year + " r3zn1k.ch"}];
+    displayMessage(entries);
+}
+
 function handleResult(result) {
     if (result['error']) {
         var nextDate = result['next_date'];
         if (nextDate != null) {
+            displayPatienceMessage();
             startCountdown(nextDate);
         } else {
-            // TODO: implement the end
-            alert("this is the end");
+            displayLastMessage();
         }
     } else {
         displayMessage(result);

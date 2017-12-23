@@ -8,12 +8,32 @@
 
 
     <link rel="stylesheet" href="css/inc/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/countdown.css">
+    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
 <main>
+    <div class="message">
+        <div class="message-container" id="message"></div>
+    </div>
+    <script type="text/template" id="text-template">
+        <div class="message-entry">
+            <span><%= value %></span>
+        </div>
+    </script>
+    <script type="text/template" id="image-template">
+        <div class="message-entry">
+            <img src="<%= value %>">
+        </div>
+    </script>
+    <script type="text/template" id="youtube-template">
+        <div class="message-entry embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/<%= value %>"></iframe>
+        </div>
+    </script>
+
     <div class="countdown">
         <div class="countdown-container" id="countdown"></div>
     </div>
@@ -24,18 +44,6 @@
             <span class="count next bottom"><%= next %></span>
             <span class="count curr bottom"><%= curr %></span>
             <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
-        </div>
-    </script>
-
-    <div class="message">
-        <div class="message-container" id="message"></div>
-    </div>
-    <script type="text/template" id="text-template">
-        <span><%= value %></span>
-    </script>
-    <script type="text/template" id="youtube-template">
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/<%= value %>"></iframe>
         </div>
     </script>
 </main>

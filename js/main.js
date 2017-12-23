@@ -6,7 +6,7 @@ $(document).ready(function() {
     $.ajax({
         url: "http://daily.r3zn1k.ch/rest/read",
         data: {
-            instance: 'oliver',
+            instance: 'irina',
             date: currentDate
         },
         success: handleResult

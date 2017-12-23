@@ -1,0 +1,22 @@
+.message {
+    margin: 0;
+    width: 355px;
+}
+
+.message .message-container {
+    display: none;
+}
+
+.message-entry {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.message-entry img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.message-entry span {
+    white-space: pre-line;
+}
