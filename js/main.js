@@ -1,5 +1,4 @@
-var currentDate = '2017-12-23'; // FIXME: remove
-// var currentDate = new Date().toISOString().slice(0, 10);
+var currentDate = new Date().toISOString().slice(0, 10);
 
 $(document).ready(function() {
     $('title').text(currentDate);

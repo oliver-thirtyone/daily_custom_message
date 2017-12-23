@@ -1,9 +1,18 @@
+var messageElement = $('#message');
+
 function displayEntry(entry) {
-    $( "#test" ).append( entry['entry'] + " <-> ");
+    var type = entry['type'],
+        value = entry['entry'];
+
+    var template = _.template($('#' + type + '-template').html());
+    messageElement.append(template({
+        value: value
+    }));
 }
 
 function displayMessage(entries) {
     entries.forEach(displayEntry);
+    messageElement.show();
 }
 
 function handleResult(result) {
