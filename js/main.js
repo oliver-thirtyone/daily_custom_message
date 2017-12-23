@@ -1,4 +1,15 @@
-var currentDate = new Date();
+var currentDate = '2017-12-23'; // FIXME: remove
+// var currentDate = new Date().toISOString().slice(0, 10);
 
-// Set the title of the document
-$('title').text(currentDate.toLocaleDateString());
+$(document).ready(function() {
+    $('title').text(currentDate);
+
+    $.ajax({
+        url: "http://daily.r3zn1k.ch/rest/read",
+        data: {
+            instance: 'oliver',
+            date: currentDate
+        },
+        success: handleResult
+    });
+});

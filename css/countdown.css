@@ -1,13 +1,14 @@
-.main-countdown {
+.countdown {
     margin: 0;
     width: 355px;
 }
 
-.main-countdown .countdown-container {
+.countdown .countdown-container {
     height: 130px;
+    display: none;
 }
 
-.main-countdown .time {
+.countdown .time {
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     display: inline-block;
@@ -41,7 +42,7 @@
     transform: translate3d(0, 0, 0);
 }
 
-.main-countdown .count {
+.countdown .count {
     background: #202020;
     color: #f8f8f8;
     display: block;
@@ -68,7 +69,7 @@
     transform-style: flat;
 }
 
-.main-countdown .count.top {
+.countdown .count.top {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 5px 5px 0 0;
@@ -81,7 +82,7 @@
     transform-origin: 50% 100%;
 }
 
-.main-countdown .count.bottom {
+.countdown .count.bottom {
     background-image: linear-gradient(rgba(255, 255, 255, 0.1), transparent);
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), transparent);
     background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.1), transparent);
@@ -101,7 +102,7 @@
     transform-origin: 50% 0;
 }
 
-.main-countdown .label {
+.countdown .label {
     font-size: normal;
     margin-top: 5px;
     display: block;
@@ -111,7 +112,7 @@
 }
 
 /* Animation start */
-.main-countdown .count.curr.top {
+.countdown .count.curr.top {
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     -ms-transform: rotateX(0deg);
@@ -120,7 +121,7 @@
     z-index: 3;
 }
 
-.main-countdown .count.next.bottom {
+.countdown .count.next.bottom {
     -webkit-transform: rotateX(90deg);
     -moz-transform: rotateX(90deg);
     -ms-transform: rotateX(90deg);
@@ -130,7 +131,7 @@
 }
 
 /* Animation end */
-.main-countdown .flip .count.curr.top {
+.countdown .flip .count.curr.top {
     -webkit-transition: all 250ms ease-in-out;
     -moz-transition: all 250ms ease-in-out;
     -ms-transition: all 250ms ease-in-out;
@@ -144,7 +145,7 @@
     transform: rotateX(-90deg);
 }
 
-.main-countdown .flip .count.next.bottom {
+.countdown .flip .count.next.bottom {
     -webkit-transition: all 250ms ease-in-out 250ms;
     -moz-transition: all 250ms ease-in-out 250ms;
     -ms-transition: all 250ms ease-in-out 250ms;

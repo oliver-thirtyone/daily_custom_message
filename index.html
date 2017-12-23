@@ -14,16 +14,23 @@
 <body>
 
 <main>
-    <div class="main-countdown">
-        <div class="countdown-container" id="main-countdown"></div>
+    <div class="countdown">
+        <div class="countdown-container" id="countdown"></div>
     </div>
-    <script type="text/template" id="main-countdown-template">
+    <script type="text/template" id="countdown-template">
         <div class="time <%= label %>">
             <span class="count curr top"><%= curr %></span>
             <span class="count next top"><%= next %></span>
             <span class="count next bottom"><%= next %></span>
             <span class="count curr bottom"><%= curr %></span>
             <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+        </div>
+    </script>
+
+    <div class="message"/>
+    <script type="text/template" id="youtube-template">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/<%= id %>"></iframe>
         </div>
     </script>
 </main>
@@ -36,8 +43,9 @@
 <script src="js/inc/bootstrap.min.js"></script>
 
 <!-- JavaScript Internal -->
-<script src="js/main.js"></script>
 <script src="js/countdown.js"></script>
+<script src="js/message.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
