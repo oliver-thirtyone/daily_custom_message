@@ -24,8 +24,7 @@ function displayPatienceMessage() {
 function displayLastMessage() {
     var year = new Date().getFullYear();
     var entries = [
-        {type: "image", entry: "img/last_message.jpg"},
-        {type: "youtube", entry: "OUyfQLd3bCs"},
+        {type: "image", entry: "img/butterfly.gif"},
         {type: "text", entry: "&copy; " + year + " r3zn1k.ch"}];
     displayMessage(entries);
 }
